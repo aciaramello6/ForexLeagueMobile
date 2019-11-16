@@ -1,0 +1,29 @@
+<!-- Header for the app. Works as a title of sorts -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Forex League Signals
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- creates a list style content area for signals/messages -->
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of signals">{{ item }}</ion-item>
+  </ion-list>
+</ion-content>
+
+
+<!-- creates a footer toolbar that allows us to input text for the client -->
+
+<ion-footer>
+  <ion-item>
+      <ion-input type="text" placeholder="Enter Signal" [(ngModel)]="inputVal"></ion-input>
+      <ion-button (click)='enterButtonClicked(inputVal)' size = "small">Enter</ion-button>
+  </ion-item>
+</ion-footer>
+  
